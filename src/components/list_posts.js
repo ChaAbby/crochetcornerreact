@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-
+import "../styles.css"
 class GetPost extends React.Component{
     state = {
         details: [],
@@ -21,15 +21,12 @@ class GetPost extends React.Component{
     
       render(){
         return (
-          <div>
-          <header>
-            Data Generated From Django
-          </header>
-          <hr></hr>
+          <div class='post-container'>
+          <h1 className="post-title">Recent Posts</h1>
           {this.state.details.map((output, id) => (
-            <div key = {id}>
-              <div>
-              <h2>Title</h2>
+            <div key = {id} >
+              <div className="posts">
+              <h2>{output.title}</h2>
               <h4>by {output.author}</h4>
               <p>{output.description}</p>
               </div>

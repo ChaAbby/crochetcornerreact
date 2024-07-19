@@ -1,12 +1,12 @@
-import GetPost from "../components/posts";
-import { NewPostPage } from "./new_post_page";
+import GetPost from "../components/list_posts";
+import '../styles.css'
 
 export function Home(){
     return (
         <>
             <GetPost/>
             <a href='/new_post'>
-            <button> New Post</button>
+            <button class="button home"> New Post</button>
             </a>
         </>
     )
