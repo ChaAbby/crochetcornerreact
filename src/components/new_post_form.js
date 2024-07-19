@@ -1,7 +1,7 @@
 import axios from "axios";
 import React,{ useState } from 'react';
 import {Navigate} from 'react-router-dom';
-import '../form.css'
+import '../component_styles/form.css'
 
 function NewPostForm({postType}){
     const [inputs, setInputs] = useState({});
@@ -40,9 +40,8 @@ function NewPostForm({postType}){
           default:
             requestData = {};
         }
-
-
-        axios.post(`http://localhost:8000/api/${postType.toLowerCase()}/`, requestData)
+        console.log(`$${process.env.REACT_APP_API_URL}:8000/api/${postType.toLowerCase()}/`)
+        axios.post(`${process.env.REACT_APP_API_URL}:8000/api/${postType.toLowerCase()}/`, requestData)
         .then(response => {
             console.log(response.data);
             window.open("/", "_self")

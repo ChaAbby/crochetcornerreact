@@ -1,0 +1,16 @@
+/* Home Page */
+.button {
+    background: #FCBFB7;
+    border: 2px solid black;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+    font-size: 20px;
+    padding: 3px;
+  }
+  
+  .button:hover,
+  .button:active {
+      text-align: center;
+      background-color: #F87462;
+      background-position: 0 0;
+  }
