@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-import "../styles.css"
+import "../component_styles/home_page.css"
 class GetPost extends React.Component{
     state = {
         details: [],
@@ -28,7 +28,7 @@ class GetPost extends React.Component{
               <div className="posts">
               <h2>{output.title}</h2>
               <h4>by {output.author}</h4>
-              <p>{output.description}</p>
+              <p>{output.description.substr(0,200)}...</p>
               </div>
             </div>
           ))}

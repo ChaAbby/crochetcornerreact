@@ -1,5 +1,5 @@
 import GetPost from "../components/list_posts";
-import '../styles.css'
+import '../component_styles/list_post.css'
 
 export function Home(){
     return (

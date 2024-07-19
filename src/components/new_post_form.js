@@ -1,7 +1,7 @@
 import axios from "axios";
 import React,{ useState } from 'react';
 import {Navigate} from 'react-router-dom';
-import '../form.css'
+import '../component_styles/form.css'
 
 function NewPostForm({postType}){
     const [inputs, setInputs] = useState({});
